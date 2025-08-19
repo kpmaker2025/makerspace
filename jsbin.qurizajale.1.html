@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2025 by anonymous (http://jsbin.com/qurizajale/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наша команда</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9fa;
+      color: #333;
+      text-align: center;
+    }
+
+    header, footer {
+      background: #fff;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header img, footer img {
+      max-width: 120px;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: 2rem;
+      color: #2c3e50;
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      color: #34495e;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .card img {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Верхній логотип -->
+  <header>
+    <img src="logo.png" alt="Логотип">
+  </header>
+
+  <!-- Заголовок -->
+  <h1>Наша команда</h1>
+
+  <!-- Картки учасників -->
+  <section class="team">
+    <div class="card">
+      <img src="person1.jpg" alt="Учасник 1">
+      <h3>Ім'я Учасника 1</h3>
+      <p>Посада / роль у команді</p>
+    </div>
+
+    <div class="card">
+      <img src="person2.jpg" alt="Учасник 2">
+      <h3>Ім'я Учасника 2</h3>
+      <p>Посада / роль у команді</p>
+    </div>
+
+    <div class="card">
+      <img src="person3.jpg" alt="Учасник 3">
+      <h3>Ім'я Учасника 3</h3>
+      <p>Посада / роль у команді</p>
+    </div>
+
+    <div class="card">
+      <img src="person4.jpg" alt="Учасник 4">
+      <h3>Ім'я Учасника 4</h3>
+      <p>Посада / роль у команді</p>
+    </div>
+  </section>
+
+  <!-- Нижній логотип -->
+  <footer>
+    <img src="logo.png" alt="Логотип">
+  </footer>
+
+  <script>
+    // Приклад: можна додати просту анімацію при завантаженні
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelectorAll(".card").forEach((card, i) => {
+        card.style.opacity = 0;
+        setTimeout(() => {
+          card.style.transition = "opacity 1s";
+          card.style.opacity = 1;
+        }, i * 300);
+      });
+    });
+  </script>
+</body>
+</html>
